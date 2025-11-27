@@ -12,7 +12,7 @@ const ListProduct = () => {
   fetchInfo();
   },[])
   const remove_product=async(id)=>{
-    await fetch('http://localhost:4000/removeproduct',{
+    await fetch("https://e-commerce-backend-00fz.onrender.com",{
       method: 'POST',
       headers:{
         accept:'application/json',
