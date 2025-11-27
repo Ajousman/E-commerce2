@@ -4,7 +4,7 @@ import cross_icon from '../../assets/cross_icon.png'
 const ListProduct = () => {
   const [allproducts,setAllProducts]=useState([]);
   const fetchInfo=async ()=>{
-  await fetch("https://e-commerce-backend-00fz.onrender.com")
+  await fetch("https://e-commerce-backend-00fz.onrender.com/allproducts")
   .then((res)=>res.json())
   .then((data)=>{setAllProducts(data)});
   }
@@ -12,7 +12,7 @@ const ListProduct = () => {
   fetchInfo();
   },[])
   const remove_product=async(id)=>{
-    await fetch("https://e-commerce-backend-00fz.onrender.com",{
+    await fetch("https://e-commerce-backend-00fz.onrender.com/removeproduct",{
       method: 'POST',
       headers:{
         accept:'application/json',
