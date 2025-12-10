@@ -18,7 +18,7 @@ const ShopContextProvider=(props)=> {
    .then((response)=>response.json())
    .then((data)=>setAll_product(data))
    if(localStorage.getItem('auth-token')){
-    fetch('http://https://e-commerce-backend-00fz.onrender.com/getcart',{
+    fetch('https://e-commerce-backend-00fz.onrender.com/getcart',{
       method:'POST',
       headers:{
         Accept:'application/form-data',
