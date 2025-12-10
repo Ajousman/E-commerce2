@@ -211,11 +211,11 @@ const fetchUser=async (req,res,next)=>{
 }
 //creating an end point for adding products in the cartdata
 app.post('/addtocart',fetchUser,async (req,res)=>{
-     console.log("added",req.body,itemId);
+     console.log("added",req.body.itemId);
    let userData=await User.findOne({_id:req.user.id});
    userData.cartData[req.body.itemId] +=1;
    await User.findOneAndUpdate({_id:req.user.id},{cartData:userData.cartData});
-   res.send("Added");
+   res.json("Added");
 })
 // creating endpoint to remove  products from the cart data
 app.post('/removefromcart',fetchUser,async (req,res)=>{
