@@ -22,6 +22,7 @@ const ListProduct = () => {
             id: product.id,
             name: product.name 
     })
+       });
     await fetchInfo();
   }
   return (
